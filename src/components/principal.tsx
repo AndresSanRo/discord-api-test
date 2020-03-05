@@ -1,9 +1,14 @@
 import React from 'react';
 
-function Principal() {
+export interface PrincipalProps {
+    value: string
+}
+
+function Principal(props: PrincipalProps) {
     return (
         <>
-            <button>Holi</button>
+            <p>logged in</p>
+            <p>{props.value}</p>
         </>
     );
   }
