@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+To start consuming the discord API you need to include your client_id key in the "src/api/config.ts" file
+
 ## Available Scripts
 
 In the project directory, you can run:

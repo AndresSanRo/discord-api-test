@@ -1,11 +1,11 @@
 import React from 'react';
 import './css/App.css';
-import Principal from './components/principal';
+import Home from './components/home';
 
 function App() {
   return (
-    <Principal />
-  );
+    <Home />
+  )
 }
 
 export default App;
