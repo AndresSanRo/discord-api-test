@@ -1,4 +1,4 @@
-import { discordConfig } from './config'
+import { discordConfig } from './'
 
 export const getDiscordToken = (): string => {
     if (window.location.hash === "") {
@@ -12,7 +12,7 @@ export const getDiscordToken = (): string => {
       }        
 }
 
-export const getUser = async (): Promise<string> => {
+export const fetchDiscordUser = async (): Promise<string> => {
     const token = getDiscordToken();
     const url = `${discordConfig.apiUrl}/users/@me`;
     const headers = {

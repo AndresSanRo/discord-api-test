@@ -1,15 +1,15 @@
 import React from 'react';
-import { getUser } from '../api/discord';
+import { fetchDiscordUser } from '../api/';
 import { DiscordUser, initDiscordUser } from '../model';
 
 function Home() {
     const [user, setUser] = React.useState<DiscordUser>(initDiscordUser());
-    const fetchUser = async () => {
-        const user: any = await getUser()
+    const getUser = async () => {
+        const user: any = await fetchDiscordUser()
         setUser(user)
     }
     React.useEffect(() => {
-        fetchUser()
+        getUser()
     })
 
     if (user.id !== "0") {
