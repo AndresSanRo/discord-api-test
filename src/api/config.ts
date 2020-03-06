@@ -1,4 +1,4 @@
-import { DiscordOauth } from "../model/discordOauth";
+import { DiscordOauth } from "../model";
 
 export const discordConfig: DiscordOauth = {
     clientId: "introduce_your_info",

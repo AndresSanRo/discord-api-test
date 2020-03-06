@@ -12,11 +12,11 @@ export const getDiscordToken = (): string => {
       }        
 }
 
-export const getUser = (): Promise<string> => {
+export const getUser = async (): Promise<string> => {
     const token = getDiscordToken();
     const url = `${discordConfig.apiUrl}/users/@me`;
     const headers = {
         "Authorization": `Bearer ${token}`
     }
-    return fetch(url, { headers: headers }).then(response => response.json())
+    return await fetch(url, { headers: headers }).then(response => response.json())
 }
