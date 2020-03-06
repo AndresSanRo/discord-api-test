@@ -10,7 +10,7 @@ function Home() {
     }
     React.useEffect(() => {
         getUser()
-    })
+    }, [])
 
     if (user.id !== "0") {
         return (
