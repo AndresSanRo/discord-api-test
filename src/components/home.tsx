@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchDiscordUser } from '../api/';
 import { DiscordUser, initDiscordUser } from '../model';
+import '../css/App.css'
 
 function Home() {
     const [user, setUser] = React.useState<DiscordUser>(initDiscordUser());
@@ -15,13 +16,23 @@ function Home() {
     if (user.id !== "0") {
         return (
             <>
-                <p>Logged in</p>
-                <p>{user.username}</p>
+                
+                <h1 className="primaryText">Discord API test</h1>              
+                <div className="centerText">
+                    <p>
+                        <span className="primaryText">Logged in as: </span>
+                        <span className="secondaryText">{user.username}</span>
+                    </p>
+                </div>
             </>
         );
     } else {
         return (            
-            <p>Not logued</p>
+            <div className="centerText">
+                <p>
+                    <span className="primaryText">Not logged in</span>
+                </p>
+            </div>            
         )
     }
   }
