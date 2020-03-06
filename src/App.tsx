@@ -4,7 +4,7 @@ import Principal from './components/principal';
 import { getUser } from './api/discord'
 
 function App() {
-  const [user, setUser] = React.useState("");
+  const [user, setUser] = React.useState<string>("");
   const fetchUser = async () => {
     const user: any = await getUser()
     setUser(user.username)

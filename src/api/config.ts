@@ -1,8 +1,9 @@
-import { Oauth } from "../model/oauth";
+import { DiscordOauth } from "../model/discordOauth";
 
-export const discordConfig: Oauth = {
-    client_id: "introduce_your_info",
-    client_secret: "introduce_your_info",
+export const discordConfig: DiscordOauth = {
+    clientId: "introduce_your_info",
+    clientSecret: "introduce_your_info",
     scope: "identify",
-    redirect_url: "http://localhost:3000/login",    
+    redirectUrl: "http://localhost:3000/login",
+    apiUrl: "https://discordapp.com/api" 
 }
